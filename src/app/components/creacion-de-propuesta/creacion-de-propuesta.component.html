@@ -1,0 +1,39 @@
+<div class="proposal-container">
+  <!-- Sección del título -->
+  <div class="text-section">
+    <h2>Título de la Propuesta</h2>
+    <input type="text" class="text-input" placeholder="Escribe el título de la propuesta aquí..." />
+  </div>
+
+  <!-- Sección de banner -->
+  <div class="banner-section">
+    <h2>Agregar banner de propuesta</h2>
+    <input type="file" accept="image/png, image/jpeg, image/jpg" class="file-input" />
+  </div>
+
+  <!-- Sección del menú desplegable -->
+  <div class="dropdown-section">
+    <h2>Seleccionar Área</h2>
+    <div class="dropdown-container" [ngClass]="{'open': isDropdownOpen}" (click)="toggleDropdown()">
+      <button class="dropdown-button">{{ selectedArea || 'Seleccionar Área' }}</button>
+      <ul class="dropdown-list">
+        <li *ngFor="let area of areaOptions" (click)="selectArea(area)">
+          {{ area }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sección del formulario -->
+  <div class="form-section">
+    <h2>Información de la propuesta</h2>
+    <form>
+      <textarea placeholder="Escribe aquí la información de la propuesta..." rows="8"></textarea>
+    </form>
+  </div>
+
+  <!-- Botón de crear propuesta -->
+  <div class="create-button">
+    <button (click)="goToPropuestaCreada()">Crear propuesta</button>
+  </div>
+</div>

@@ -1,0 +1,238 @@
+/* Tipografía y colores base */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+/* Contenedor principal */
+.proposal-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+/* Sección del título */
+.text-section {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #4facfe, #13a9b1);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.text-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.text-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Sección de banner */
+.banner-section {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.banner-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.file-input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.file-input:hover {
+    background: #f0f0f0;
+}
+
+/* Sección del menú desplegable */
+.dropdown-section {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dropdown-button:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+.dropdown-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Lista del desplegable */
+.dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.dropdown-list li {
+    padding: 8px 15px;
+}
+
+.dropdown-list li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-list li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar la lista al hacer clic */
+.dropdown-container.open .dropdown-list {
+    display: block;
+}
+
+/* Sección del formulario */
+.form-section {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #4facfe;
+}
+
+.form-section textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.form-section textarea:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+/* Botón de Crear propuesta */
+.create-button {
+    display: flex;
+    justify-content: center;
+}
+
+.create-button button {
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4facfe, #13a9b1);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.create-button button:hover {
+    background: linear-gradient(135deg, #00f2fe, #13a9b1);
+    transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .proposal-container {
+        padding: 20px;
+    }
+
+    .dropdown-section h2, .form-section h2 {
+        font-size: 1.2em;
+    }
+
+    .create-button button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .proposal-container {
+        padding: 15px;
+    }
+
+    .form-section textarea, .text-input {
+        font-size: 0.9em;
+    }
+
+    .create-button button {
+        font-size: 0.8em;
+    }
+}

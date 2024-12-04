@@ -1,0 +1,75 @@
+/* Evitar scroll en toda la página */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden; /* Evita scroll en toda la página */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo sin imagen */
+.background {
+    width: 100%; /* Cambia a 100% para evitar el desbordamiento horizontal */
+    height: 100%; /* Cambia a 100% para evitar el desbordamiento vertical */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Formulario centrado */
+form {
+    width: 90%;
+    max-width: 400px;
+    background: #24303c;
+    padding: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+/* Texto de advertencia en donde se le dice al usuario que sus datos están protegidos */
+.form-text {
+    color: azure;
+    font-size: 0.9em;
+}
+
+/* Botón de registro */
+.login-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    form {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 95%;
+        padding: 10px;
+    }
+}

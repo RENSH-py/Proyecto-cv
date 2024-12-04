@@ -1,0 +1,31 @@
+<div class="background">
+    <form id="box-form" [formGroup]="myForm" (ngSubmit)="enviarFormulario()">
+        <h2>Formulario de registro</h2>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Nombre</label>
+        <input type="text" class="form-control" formControlName="nombre" id="exampleInputNombre" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" formControlName="apellidos" id="exampleInputApellido" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Dirección de correo</label>
+        <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electronico.</div>
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" formControlName="contraseña" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Dirección</label>
+          <input type="text" class="form-control" formControlName="direccion" id="exampleInputApellido" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Número de celular</label>
+          <input type="text" class="form-control" formControlName="telefono" id="exampleInputApellido" aria-describedby="emailHelp">
+        </div>
+        <button class="login-btn" color="primary" mat-raised-button>REGISTRAR</button>
+    </form>
+</div>
